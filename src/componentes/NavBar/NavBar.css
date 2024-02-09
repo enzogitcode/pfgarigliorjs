@@ -1,0 +1,8 @@
+header {
+    list-style: none;
+    text-decoration: none;
+    
+}
+header nav ul{
+    display: flex;
+}
