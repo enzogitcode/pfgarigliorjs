@@ -1,8 +1,20 @@
-# React + Vite
+# Scala Bakery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tecnologías utilizadas
+-React
+-Vite
+-React Router
+-Firebase
+## Funcionalidades
+-Ver una lista de productos disponibles.
+-Ver un carrito de compras.
+-Simular una compra.
 
-Currently, two official plugins are available:
+### Instalación
+1- Clonar un repositorio.
+2- Abrimos una terminal
+3- Ejecutamos el comando npm install para descargar los módulos y dependencias.
+4- Ejecutamos el comando npm run dev para visualizar el proyecto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Licencia
+Este proyecto esta licenciado bajo MIT.

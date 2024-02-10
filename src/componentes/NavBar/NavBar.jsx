@@ -1,23 +1,37 @@
 import React from 'react'
-import './index.css'
-import NavBar from './componentes/NavBar/NavBar'
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
+import {Link, NavLink} from "react-router-dom";
 
-const App = () => {
+const NavBar = () => {
   return (
-    <>
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/categoria+/:idCategoria' element={<ItemListContainer />} />
-          <Route path='/item/:idItem' element={<ItemDetailContainer />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <header>
+      <Link to="/">
+        <h1>Scala Bakery </h1>
+      </Link>
+
+        <nav>
+            <ul>
+
+                <li>
+                  <NavLink to="/categoria/Tortas">
+                    Tortas
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/categoria/Laminados">
+                    Laminados
+                  </NavLink>
+                </li>
+
+            </ul>
+        </nav>
+        
+        <CartWidget/>
+
+    </header>
   )
 }
 
-export default App
+export default NavBar

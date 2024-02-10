@@ -1,3 +1,5 @@
+/* 
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase"
@@ -8,7 +10,7 @@ import {getFirestore} from "firebase"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY_FIREBASE_CONFIG,
+  apiKey: "AIzaSyBVBFXRpke3KJYTvff4PKJxE8PKQFrXFps",
   authDomain: "mirproyectocode.firebaseapp.com",
   projectId: "mirproyectocode",
   storageBucket: "mirproyectocode.appspot.com",
@@ -20,3 +22,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db= getFirestore (app);
+
+//// Como traer firebase al proyecto
+eliminar asyncmock
+
+importar los hooks useState, useEffect
+
+importar la base --db--
+
+importar las funciones de firebase
+
+
+
+
+
+*/
