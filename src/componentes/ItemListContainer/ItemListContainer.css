@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Roboto:wght@100&family=Sen&family=Ubuntu:wght@300&display=swap");
+
+h2 {
+    font-size: 1.9rem;
+    text-decoration: underline wavy 2px #ff0000;
+    font-family: 'Collingar';
+    font-weight: bolder;
+    text-align: center;
+    margin: 2% 1%;
+}

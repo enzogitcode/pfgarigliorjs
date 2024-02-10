@@ -1,8 +1,68 @@
-header {
-    list-style: none;
-    text-decoration: none;
-    
+@font-face {
+    font-family: Collingar;
+    src: url(../../../public/fonts/Collingar\ DEMO.otf);
 }
-header nav ul{
+
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Roboto:wght@100&family=Sen&family=Ubuntu:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azulnegocio: #141951;
+    --azulletras: #161952;
+    --celestebandera: #75AADb;
+    --colorrojizo: #8b171a;
+    --cardBisque: #dbc3b3;
+}
+
+h1 {
+    font-family: 'Collingar';
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: var(--azulnegocio);
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+header {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Collingar';
+    background-color: var(--celestebandera);
+}
+
+li {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+li:hover {
+    text-decoration: underline 2.5px var(--colorrojizo);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+nav ul li {
+    background-color: var(--cardBisque);
+    padding: 10px;
+    border-radius: 10px;
+}
+nav ul li a {
+    color: var(--azulletras);
+}
+nav ul li a:hover {
+    text-decoration: underline 2.5px #8b171a;
 }

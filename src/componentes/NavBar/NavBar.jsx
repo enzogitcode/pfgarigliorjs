@@ -1,20 +1,23 @@
 import React from 'react'
+import './index.css'
+import NavBar from './componentes/NavBar/NavBar'
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-const NavBar = () => {
+const App = () => {
   return (
-    <header>
-        <h1>Negocio</h1>
-        
-        <nav>
-            <ul>
-                <li>Mini Cakes</li>
-                <li>Laminados</li>
-                <li>Tortas</li>
-            </ul>
-        </nav>
-
-    </header>
+    <>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/categoria+/:idCategoria' element={<ItemListContainer />} />
+          <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
-export default NavBar
+export default App

@@ -1,0 +1,15 @@
+.contenedorItem {
+    background-color: var(--cardBisque);
+    color: var(--azulletras);
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 3rem;
+    flex-wrap: wrap;
+}
+.contenedorItem p {
+    font-family: 'Ubuntu';
+}
+img {
+    width: 35%;
+}

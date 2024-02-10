@@ -1,0 +1,34 @@
+.cardProducto {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 14px;
+    width: 15rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu';
+}
+
+h3 {
+    font-family: 'Collingar';
+}
+
+.cardProducto:hover {
+    box-shadow: 3px 3px #75AADb;
+}
+
+.cardProducto img {
+    width: 150px;
+}
+
+.prodDato {
+    font-family: 'Ubuntu';
+    font-weight: bolder;
+}
+
+.verDetalles {
+    font-family: 'Collingar';
+}
