@@ -1,7 +1,7 @@
 import React from 'react'
 import './CartWidget.css'
 
-const CarWidget = () => {
+const CartWidget = () => {
   return (
     <div>
         <img className='imgCarrito' src="../../imgs/carritoscalonetasinfondo.png" alt="carrito" />
@@ -10,4 +10,4 @@ const CarWidget = () => {
   )
 }
 
-export default CarWidget
+export default CartWidget

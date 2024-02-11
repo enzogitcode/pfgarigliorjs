@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 
 const ItemDetail = ({nombre, stock, precio, img}) => {
@@ -19,7 +21,7 @@ const ItemDetail = ({nombre, stock, precio, img}) => {
         <h3 className='itemDetailPrecio'>Precio: $ {precio} </h3>
         <p>Stock: {stock}</p>
         <h4>Descripción del producto</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ea eum in consequatur nesciunt dolores nam, fugiat eligendi ipsa esse quod voluptatem accusamus facere natus! Numquam expedita ut repellendus inventore!</p>
+        <p>Lorem ipsum dolor sit.</p>
         <img src={img} alt={nombre} />
         {
         agregarCantidad > 0 ? (<Link to="/cart"> Terminar compra</Link>) : (<ItemCount incial = {1} stock = {stock} funcionAgregar = {manejadorCantidad} />)

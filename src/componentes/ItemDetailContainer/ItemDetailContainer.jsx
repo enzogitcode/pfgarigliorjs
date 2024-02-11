@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const nvoDoc = doc(db, "inventario", idItem);
     getDoc(nvoDoc)
-      .then(respuesta => {
+      .try(respuesta => {
         const data = respuesta.data();
         const nvoProducto = { id: respuesta.id, ...data }
         setProducto(nvoProducto);
@@ -18,6 +18,10 @@ const ItemDetailContainer = () => {
       .catch (error => console.log ("cualquiera", error))
 
   }, [idItem])
+
+
+//TENGO QUE QUITAR LOS CONSOLE.LOG DE LAS FUNCIONES
+
 
   return (
     <div>

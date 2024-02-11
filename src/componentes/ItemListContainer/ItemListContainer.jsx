@@ -21,8 +21,11 @@ const ItemListContainer = () => {
         })
         setProductos(nvosProductos);
       })
-      .catch(error => { console.log(error) })
+      .catch(error =>  console.log("error", error))
   }, [idCategoria])
+
+
+//Tengo que quitar los CONSOLE.LOG
 
   return (
     <div>

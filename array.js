@@ -36,7 +36,7 @@ const productosArray= [
       nombre: "Lemon Pie Mini cake",
       precio: 10000,
       img: "../imgs/tiramisu.jpg",
-      idCat: "Tortas",
+      idCat: "Mini Cake",
       stock: 5000
     },
     {
@@ -44,7 +44,7 @@ const productosArray= [
       nombre: "Rogel Mini Cake",
       precio: 10000,
       img: "../imgs/tiramisu.jpg",
-      idCat: "Tortas",
+      idCat: "Mini Cake",
       stock: 5000
     },
     {
