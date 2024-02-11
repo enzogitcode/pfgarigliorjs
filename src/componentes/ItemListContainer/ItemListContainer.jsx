@@ -8,9 +8,11 @@ import { collection, getDocs, where, query } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
-  const { idCat } = useParams();
+  const { idCategoria } = useParams();
   useEffect(() => {
-    const misProductos = idCategoria ? query(collection(db, "productitos"), where("idCat", "==", idCategoria)) : collection(db, "inventario")
+    const misProductos = idCategoria ? query(collection(db, "producción"), where("idCat", "==", idCategoria)) : collection(db, "inventario")
+
+
     getDocs(misProductos)
       .then(respuesta => {
         const nvosProductos = respuesta.docs.map(doc => {
@@ -19,13 +21,16 @@ const ItemListContainer = () => {
         })
         setProductos(nvosProductos);
       })
-      .catch(error => { alert(error) })
+      .catch(error => { console.log(error) })
   }, [idCategoria])
 
   return (
     <div>
       <h2> Nuestros Productos </h2>
-      <ItemList productos={productos} /></div>
+      <div>
+      <ItemList productos={productos} />
+      </div>
+    </div>
   )
 
 }
