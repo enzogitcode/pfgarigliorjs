@@ -20,7 +20,7 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/categoria/Minicake">
+                  <NavLink to="/categoria/Mini cake">
                     Mini Cakes
                   </NavLink>
                 </li>
