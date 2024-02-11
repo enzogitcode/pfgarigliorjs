@@ -2,9 +2,7 @@ import React from 'react'
 
 const Contexto = () => {
   return (
-    <div>
-        
-    </div>
+    <div>Contexto</div>
   )
 }
 
