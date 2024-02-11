@@ -6,6 +6,12 @@ const ItemDetail = ({nombre, stock, precio, img}) => {
 
   const {agregarAlCarrito} = useContext(CarritoContext);
 
+  const manejadorCantidad =  (cantidad) => {
+    setAgregarCantidad(cantidad);
+
+    const item = {id, nombre, precio};
+    agregarAlCarrito(item, cantidad);
+  }
 
   return (
     <div className='contenedorItem'>
