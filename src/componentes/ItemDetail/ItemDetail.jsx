@@ -17,7 +17,6 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
 
   return (
     <div className='contenedorItem'>
-      <p>id: {id}</p>
       <h2 className='itemDetailNombre'>Nombre: {nombre} </h2>
       <h3 className='itemDetailPrecio'>Precio: $ {precio} </h3>
       <p>Stock: {stock}</p>
