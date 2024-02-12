@@ -29,6 +29,11 @@ const NavBar = () => {
                     Tortas
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to="/categoria/Chipa">
+                    Chipá
+                  </NavLink>
+                </li>
 
             </ul>
         </nav>
