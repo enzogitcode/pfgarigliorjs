@@ -8,9 +8,9 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
   const { idItem } = useParams();
   useEffect(() => {
-    const nvoDoc = doc(db, "inventario", idItem);
+    const nvoDoc = doc(db, "productos", idItem);
     getDoc(nvoDoc)
-      .try(respuesta => {
+      .then (respuesta => {
         const data = respuesta.data();
         const nvoProducto = { id: respuesta.id, ...data }
         setProducto(nvoProducto);
