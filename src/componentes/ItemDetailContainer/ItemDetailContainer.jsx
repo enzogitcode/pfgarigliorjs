@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     getDoc(nvoDoc)
       .then (respuesta => {
         const data = respuesta.data();
-        const nvoProducto = { ...respuesta.data()};
+        const nvoProducto = { ...respuesta.data(), id: doc.id};
         setProducto(nvoProducto);
         console.log (respuesta)
       })
