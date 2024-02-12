@@ -3,7 +3,7 @@ import { useState } from 'react';
 //import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 
-const ItemDetail = ({ nombre, stock, precio, img, descripcion }) => {
+const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
   /* const [agregarCantidad, setAgregarCantidad] = useState(0);
 
   const { agregarAlCarrito } = useContext(CarritoContext);
@@ -17,6 +17,7 @@ const ItemDetail = ({ nombre, stock, precio, img, descripcion }) => {
 
   return (
     <div className='contenedorItem'>
+      <p>id: {id}</p>
       <h2 className='itemDetailNombre'>Nombre: {nombre} </h2>
       <h3 className='itemDetailPrecio'>Precio: $ {precio} </h3>
       <p>Stock: {stock}</p>

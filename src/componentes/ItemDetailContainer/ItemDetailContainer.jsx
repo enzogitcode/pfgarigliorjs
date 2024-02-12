@@ -8,12 +8,13 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
   const { idItem } = useParams();
   useEffect(() => {
-    const nvoDoc = doc(db, "productos", idItem);
+    const nvoDoc = doc(db, "productitos", idItem);
     getDoc(nvoDoc)
       .then (respuesta => {
         const data = respuesta.data();
-        const nvoProducto = { id: respuesta.id, ...data }
+        const nvoProducto = { ...respuesta.data()};
         setProducto(nvoProducto);
+        console.log (respuesta)
       })
       .catch (error => console.log ("cualquiera", error))
 
