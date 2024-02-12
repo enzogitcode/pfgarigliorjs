@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Collingar;
     src: url(/fonts/Collingardemo.otf);
 }
@@ -18,7 +18,7 @@
     --colorrojizo: #8b171a;
     --cardBisque: #dbc3b3;
 }
-
+ */
 h1 {
     font-family: 'Collingar';
     font-size: 2.5rem;
