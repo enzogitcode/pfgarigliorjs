@@ -1,19 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
-//import { Link } from 'react-router-dom';
+import { useState, useContext} from 'react';
+import { CarritoContexto } from '../../contexto/Contexto';
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
-  /* const [agregarCantidad, setAgregarCantidad] = useState(0);
+   const [agregarCantidad, setAgregarCantidad] = useState(0);
 
-  const { agregarAlCarrito } = useContext(CarritoContext);
+  const { agregarAlCarrito } = useContext(CarritoContexto);
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
 
     const item = { id, nombre, precio };
     agregarAlCarrito(item, cantidad);
-  } */
+  } 
 
   return (
     <div className='contenedorItem'>

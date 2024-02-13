@@ -1,13 +1,12 @@
 import React from 'react'
 import { useState, createContext } from "react";
 
+export const CarritoContexto = createContext({ total: 0, cantidadTotal: 0, carrito: [] })
 
-export const carritoContexto = createContext({ total: 0, cantidadTotal: 0, carrito: [] })
-
-export const CarritoProvider = () => {
+export const CarritoProvider = ({children}) => {
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0);
-  const [cantidad, setCantidadTotal] = useState(0);
+  const [cantidadTotal, setCantidadTotal] = useState(0);
   //agregar add, remove, clear
 
   const agregarAlCarrito = (item, cantidad) => {
@@ -17,8 +16,35 @@ export const CarritoProvider = () => {
       setCantidadTotal(prev => [...prev + cantidad])
       setTotal(prev => [...prev + (item.precio * cantidad)])
     }
-    else {}
+    else {
+      const carritoActualizado = carrito.map(prod => {
+        if (prod.item.id === item.id) {
+          return { ...prod, cantidad: prod.cantidad + cantidad };
+        } else { return prod }
+      })
+      setCarrito(carritoActualizado)
+      setCantidadTotal(prev => [...prev + cantidad])
+      setTotal(prev => [...prev + (item.precio * cantidad)])
+
+    }
   }
+  const eliminarDelCarrito = (id) => {
+    const productoEliminado = carrito.find(prod => prod.item.id === id);
+    const carritoActualizado = carrito.filter(prod => prod.item.id !== id);
+
+    setCarrito(carritoActualizado);
+    setCantidadTotal(prev => prev - productoEliminado.cantidad);
+    setTotal(prev => prev - (productoEliminado.item.precio * productoEliminado.cantidad));
+
+  }
+  const vaciarCarrito = () => {
+    setCarrito([]);
+    setTotal(0);
+    setCantidadTotal(0);
+  }
+  return (
+    <CarritoContexto.Provider value={{ carrito, total, cantidadTotal, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}> {children} </CarritoContexto.Provider>
+
+    )
 }
 
-export default Contexto
