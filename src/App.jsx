@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './componentes/NavBar/NavBar'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
-import { CarritoProvider } from './contexto/Contexto';
+import { CarritoProvider } from './context/Context';
+
 
 const App = () => {
   return (

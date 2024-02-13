@@ -1,5 +1,5 @@
 # Scala Bakery
-
+Somos una empresa familiar dedidacada a 
 # Tecnologías utilizadas
 -React
 -Vite

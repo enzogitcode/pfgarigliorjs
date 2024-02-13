@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useContext} from 'react';
-import { CarritoContexto } from '../../contexto/Contexto';
+import { CarritoContexto } from '../../context/Context';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
@@ -26,7 +26,7 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
       <p>{descripcion}</p>
       <img src={img} alt={nombre} />
        {
-        agregarCantidad > 0 ? (<Link to="/Cart"> Terminar compra</Link>) : (<ItemCount incial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+        agregarCantidad > 0 ? (<Link to="/Cart"> Terminar compra</Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
       } 
     </div>
   )
