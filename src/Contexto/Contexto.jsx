@@ -12,9 +12,9 @@ export const CarritoProvider = ({children}) => {
   const agregarAlCarrito = (item, cantidad) => {
     const productoExistente = carrito.find(prod => prod.item.id === item.id);
     if (!productoExistente) {
-      setCarrito(prev => [...prev, { item, cantidad }])
-      setCantidadTotal(prev => [...prev + cantidad])
-      setTotal(prev => [...prev + (item.precio * cantidad)])
+      setCarrito(prev => [prev, { item, cantidad }])
+      setCantidadTotal(prev => [prev + cantidad])
+      setTotal(prev => prev + (item.precio * cantidad))
     }
     else {
       const carritoActualizado = carrito.map(prod => {
@@ -23,7 +23,7 @@ export const CarritoProvider = ({children}) => {
         } else { return prod }
       })
       setCarrito(carritoActualizado)
-      setCantidadTotal(prev => [...prev + cantidad])
+      setCantidadTotal(prev => [prev + cantidad])
       setTotal(prev => [...prev + (item.precio * cantidad)])
 
     }
