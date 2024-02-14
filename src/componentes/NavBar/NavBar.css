@@ -33,7 +33,7 @@ header {
     flex-wrap: wrap;
     margin: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-family: 'Collingar';
     background-color: var(--celestebandera);
 }

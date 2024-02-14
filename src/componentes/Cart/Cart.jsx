@@ -21,12 +21,12 @@ export default Cart */
 
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
-import { CarritoContext } from "../../context/CarritoContext";
+import { CarritoContexto } from "../../context/Context";
 import { useContext } from "react";
 
 const Cart = () => {
   
-    const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContext);
+    const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContexto);
 
     if (cantidadTotal === 0) {
         return (

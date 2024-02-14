@@ -16,10 +16,10 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
     const item = { id, nombre, precio };
     agregarAlCarrito(item, cantidad);
   } 
-
   return (
     <div className='contenedorItem'>
       <h2 className='itemDetailNombre'>Nombre: {nombre} </h2>
+      <p>ID: {id}</p>
       <h3 className='itemDetailPrecio'>Precio: $ {precio} </h3>
       <p>Stock: {stock}</p>
       <h4>Descripción del producto</h4>
