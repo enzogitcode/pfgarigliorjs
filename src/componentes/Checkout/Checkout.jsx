@@ -5,7 +5,7 @@ import './Checkout.css'
 
 const Checkout = () => {
 
-  /* return (
+  return (
     <div id='divCheckout'>
       <form id='formCheckout'>
 <input type="text" /><label htmlFor=""></label>    
@@ -18,11 +18,11 @@ const Checkout = () => {
       </form>
     </div>
   )
-} */
+ 
 
 
 
-
+/* 
   return (
     <div id='divFormulario'>
       <Form>
@@ -56,7 +56,7 @@ const Checkout = () => {
       </Form>
     </div>
 
-  );
+  ); */
 
 }
 export default Checkout
