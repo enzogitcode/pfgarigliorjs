@@ -1,12 +1,12 @@
 import React from 'react';
-import { useState, useContext} from 'react';
+import { useState, useContext } from 'react';
 import { CarritoContexto } from '../../context/Context';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 
 const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
-   const [agregarCantidad, setAgregarCantidad] = useState(0);
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
 
   const { agregarAlCarrito } = useContext(CarritoContexto);
 
@@ -15,7 +15,7 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
 
     const item = { id, nombre, precio };
     agregarAlCarrito(item, cantidad);
-  } 
+  }
   return (
     <div className='contenedorItem'>
       <h2 className='itemDetailNombre'>Nombre: {nombre} </h2>
@@ -25,9 +25,9 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
       <h4>Descripción del producto</h4>
       <p>{descripcion}</p>
       <img src={img} alt={nombre} />
-       {
-        agregarCantidad > 0 ? (<Link to="/cart"> Terminar compra</Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-      } 
+      {
+        agregarCantidad > 0 ? (<Link to="/cart"> <button id='btnTerminarCompra'>Finalizar compra</button></Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+      }
     </div>
   )
 }

@@ -17,3 +17,6 @@
     --colorrojizo: #8b171a;
     --cardBisque: #dbc3b3;
 }
+/* body {
+    background: linear-gradient(205deg, #ffffff 0%, var(--cardBisque) 60%);
+} */

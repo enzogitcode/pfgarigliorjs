@@ -1,8 +1,13 @@
 import React from 'react'
+//import './CartItem.css'
 
-const CartItem = () => {
+const CartItem = ({item, cantidad}) => {
   return (
-    <div>CartItem</div>
+    <div>
+        <h3> {item.nombre}  </h3>
+        <p> Cantidad: {cantidad} </p>
+        <p> Precio: {item.precio} </p>
+    </div>
   )
 }
 

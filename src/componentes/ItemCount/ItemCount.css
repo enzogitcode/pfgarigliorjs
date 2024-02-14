@@ -1,0 +1,28 @@
+.contadorCss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.btnContador {
+    padding: 1%;
+    font-weight: bold;
+    border-radius: 10%;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 1%;
+}
+
+.btnContadorSumar {
+    background-color: var(--celestebandera);
+}
+
+.btnContadorRestar {
+    background-color: #ff0000;
+}
+
+.nroContador {
+    background-color: #fff;
+    color: #000;
+}

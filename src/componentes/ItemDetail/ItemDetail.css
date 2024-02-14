@@ -12,4 +12,11 @@
 }
 img {
     width: 35%;
+    border-radius: 14px;
+    border-color: var(--azulletras);
+}
+#btnTerminarCompra {
+    font-size: 1.5rem;
+    padding: 1%;
+    border-radius: 14px;
 }

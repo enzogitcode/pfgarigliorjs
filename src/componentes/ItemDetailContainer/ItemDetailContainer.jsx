@@ -14,7 +14,6 @@ const ItemDetailContainer = () => {
         const data = respuesta.data();
         const nvoProducto = { ...respuesta.data(), id: doc.id};
         setProducto(nvoProducto);
-        console.log (respuesta)
       })
       .catch (error => console.log ("cualquiera", error))
 
