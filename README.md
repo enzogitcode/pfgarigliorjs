@@ -1,5 +1,5 @@
 # Scala Bakery
-Somos una empresa familiar dedidacada a 
+Somos una empresa familiar dedidacada a producción de panificados y postres. Contamos con productos fresco. Luego del éxito en nuestro local, decidimos ampliar las fronteras y poder llegar más clientes con una excelente atención.
 # Tecnologías utilizadas
 -React
 -Vite
