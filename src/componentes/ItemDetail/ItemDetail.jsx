@@ -21,13 +21,14 @@ const ItemDetail = ({ id, nombre, stock, precio, img, descripcion }) => {
       <h2 className='itemDetailNombre'>Nombre: {nombre} </h2>
       <p>ID: {id}</p>
       <h3 className='itemDetailPrecio'>Precio: $ {precio} </h3>
-      <p>Stock: {stock}</p>
-      <h4>Descripción del producto</h4>
-      <p>{descripcion}</p>
+      <p className='itemDetailStock'>Stock: {stock}</p>
+      <h4 className='itemDetailDescripcionTitulo'>Descripción del producto</h4>
+      <p className='itemDetailDescripcion'>{descripcion}</p>
       <img src={img} alt={nombre} />
-      {
-        agregarCantidad > 0 ? (<Link to="/cart"> <button id='btnTerminarCompra'>Finalizar compra</button></Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-      }
+      <div>
+        {
+          agregarCantidad > 0 ? (<Link to="/cart"> <button id='btnTerminarCompra'>Finalizar compra</button></Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+        }</div>
     </div>
   )
 }

@@ -25,6 +25,10 @@ h3 {
     width: 150px;
 }
 
+.cardNombre {
+    font-size: 1.4rem;
+}
+
 .prodDato {
     font-family: 'Ubuntu';
     font-weight: bolder;
@@ -32,4 +36,15 @@ h3 {
 
 .verDetalles {
     font-family: 'Collingar';
+    background-color: var(--cardBisque);
+    color: var(--azulletras);
+    font-size: 1.2rem;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.verDetalles a:hover {
+    color: var(--azulletras);
+    text-decoration: underline 1.5px #8b171a;
+    ;
 }

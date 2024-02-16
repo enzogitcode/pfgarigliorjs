@@ -14,9 +14,10 @@
     --azulnegocio: #141951;
     --azulletras: #161952;
     --celestebandera: #75AADb;
-    --colorrojizo: #8b171a;
+    --colorrojizovino: #8b171a;
     --cardBisque: #dbc3b3;
 }
+a{text-decoration: none;}
 /* body {
     background: linear-gradient(205deg, #ffffff 0%, var(--cardBisque) 60%);
 } */

@@ -64,6 +64,6 @@ nav ul li a {
     color: var(--azulletras);
 }
 nav ul li a:hover {
-    text-decoration: underline 2.5px #8b171a;
+    text-decoration: underline 2.5px var(--colorrojizovino);
 }
 
