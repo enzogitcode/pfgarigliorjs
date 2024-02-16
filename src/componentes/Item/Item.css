@@ -27,7 +27,7 @@ h3 {
 
 .cardProducto img {
     width: 150px;
-    max-height: 150px;
+    max-height: 8rem;
 }
 
 .cardNombre {

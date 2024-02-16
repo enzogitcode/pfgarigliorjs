@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: column;
 }
+
+.divCarritoVacio p {
+    font-size: 2.5rem;
+}
+
 .divCarritoLleno {
     background-color: var(--cardBisque);
     color: var(--azulletras);
@@ -28,4 +33,32 @@
     padding: 1%;
     font-family: 'Collingar';
     border-radius: 10px;
+}
+
+.divBtnsCarrito {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btnCarrito {
+    font-size: 1.5rem;
+    padding: 1%;
+    background-color: var(--azulnegocio);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btnCarrito a:visited {
+    color: #fff;
+}
+
+.verProductos {
+    font-family: 'Collingar';
+    background-color: var(--cardBisque);
+    color: var(--azulletras);
+    font-size: 1.2rem;
+    padding: 1%;
+    border-radius: 10px;
+    border: solid var(--azulnegocio);
 }

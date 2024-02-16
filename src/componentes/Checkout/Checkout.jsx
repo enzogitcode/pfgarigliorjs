@@ -58,6 +58,7 @@ const Checkout = () => {
       })
   }
 
+  
 
 
   return (
@@ -70,6 +71,7 @@ const Checkout = () => {
             <div key={producto.item.id}>
               <p>{producto.item.nombre} x {producto.cantidad}</p>
               <p>Precio: ${producto.item.precio}</p>
+              <button onClick={() => eliminarDelCarrito}>Eliminar del carrito</button>
             </div>
           ))
         }
