@@ -4,9 +4,7 @@ import { CarritoContexto } from '../../context/Context.jsx'
 import { db } from '../../services/config.js'
 import './Checkout.css'
 import { collection, addDoc } from 'firebase/firestore'
-/* import { InputGroup } from 'react-bootstrap'
-import { Form } from 'react-bootstrap'
- */
+
 
 
 const Checkout = () => {
@@ -53,7 +51,6 @@ const Checkout = () => {
         vaciarCarrito();
       })
       .catch(error => {
-        console.log("error al crear la compra", error);
         setError(<div className='divError'><p>{error}</p></div>);
       })
   }
@@ -71,7 +68,7 @@ const Checkout = () => {
             <div key={producto.item.id}>
               <p>{producto.item.nombre} x {producto.cantidad}</p>
               <p>Precio: ${producto.item.precio}</p>
-              <button>Eliminar del carrito</button>
+              <button onClick={() => eliminarDelCarrito (id)}>Eliminar del carrito</button>
             </div>
           ))
         }
