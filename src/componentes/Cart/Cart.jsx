@@ -22,7 +22,7 @@ const Cart = () => {
     return (
         <div className="divCarritoLleno">
             {
-                carrito.map(prod => <CartItem key={prod.id} {...prod} />)
+                carrito.map(prod => <div><CartItem key={prod.id} {...prod} /></div>)
             }
             <h3> Total:$ {total}  </h3>
             <button onClick={() => vaciarCarrito()}> Vaciar Carrito </button>

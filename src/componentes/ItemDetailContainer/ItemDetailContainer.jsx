@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     getDoc(nvoDoc)
       .then (respuesta => {
         const data = respuesta.data();
-        const nvoProducto = { ...respuesta.data(), id: doc.id};
+        const nvoProducto = {id: respuesta.id, ...data};
         setProducto(nvoProducto);
       })
       .catch (error => console.log ("cualquiera", error))
