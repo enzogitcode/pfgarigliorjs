@@ -1,12 +1,27 @@
-import React from 'react'
+import './CartItem.css'
 
-const CartItem = ({item, cantidad}) => {
+const CartItem = ({ item, cantidad, eliminarProducto }) => {
+
   return (
-    <div>
-        <h3> {item.nombre}  </h3>
+    <>
+      {/* <h3> {item.nombre}  </h3>
         <p> Cantidad: {cantidad} </p>
         <p> Precio: {item.precio} </p>
-    </div>
+        <p> Precio final: {item.precio * cantidad} */}
+
+      <div className='cardItemContainer'>
+        <div class="textoCompra">
+          <div class="descripcionCompra">
+            <p> {item.nombre} </p>
+            <p> Cantidad: {cantidad} </p>
+            <p> Precio unitario: {item.precio} </p>
+            <p className='precioFinal'> Precio final: {item.precio * cantidad}</p>
+          </div>
+
+          <button onClick={() => eliminarProducto (item.id)} class="btnEliminarDelCarrito">Eliminar del carrito</button>
+        </div>
+      </div>
+    </>
   )
 }
 

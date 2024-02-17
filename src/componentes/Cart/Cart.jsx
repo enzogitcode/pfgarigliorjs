@@ -13,6 +13,7 @@ const Cart = () => {
             <>
                 <div className='divCarritoVacio'>
                     <p>El carrito esta vacío</p>
+                    <p>Haz click en "Ver Productos" para seguir recorriendo nuestro App</p>
                     {/*                     <img src="" alt="carritovacio" />
  */}                    <Link to="/"><button className="verProductos">Ver Productos </button></Link>
                 </div>
@@ -22,11 +23,12 @@ const Cart = () => {
     return (
         <div className="divCarritoLleno">
             {
-                carrito.map(prod => <div><CartItem key={prod.id} {...prod} /></div>)
+                carrito.map(prod => <CartItem key={prod.id} {...prod} />)
             }
-            <h3> Total:$ {total}  </h3>
-            <button onClick={() => vaciarCarrito()}> Vaciar Carrito </button>
-            <button><Link to="/checkout"> Finalizar Compra </Link></button>
+            <h3 className="totalCompra"> El total de su compra es de: $ {total}  </h3>
+            <div className="divBtnsCarrito">
+                <button className="btnCarrito btnVaciarCarrito" onClick={() => vaciarCarrito()}> Vaciar Carrito </button>
+                <button className="btnCarrito btnFinalizarCompraCarrito"><Link to="/checkout"> Finalizar Compra </Link></button></div>
         </div>
     )
 }

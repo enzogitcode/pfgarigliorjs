@@ -8,6 +8,7 @@
     border-radius: 10px;
     margin: 3rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -18,14 +19,16 @@
 .divCarritoLleno {
     background-color: var(--cardBisque);
     color: var(--azulletras);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Collingar';
     text-align: center;
     border: 1px solid #000;
     border-radius: 10px;
-    margin: 3rem;
+    margin: 1.5rem;
+    padding: 1%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .verProductos {

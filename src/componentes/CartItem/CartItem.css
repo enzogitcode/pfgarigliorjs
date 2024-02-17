@@ -1,0 +1,56 @@
+.cardItemContainer {
+    margin: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.descripcionCompra {
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--cardBisque);
+    padding: 1rem;
+    color: var(--azulnegocio);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    flex-shrink: 1;
+
+    * {
+        margin: 1%;
+        text-align: center;
+    }
+}
+
+
+.precioFinal {
+    border: 0;
+    background-color: var(--azulnegocio);
+    padding: 1%;
+    color: #ffffff;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.textoCompra {
+    display: flex;
+}
+
+.descripcionCompra {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    color: var(--clr-main);
+    border: 1px solid black;
+}
+
+.btnEliminarDelCarrito {
+    font-family: 'Ubuntu';
+    font-size: 1.5rem;
+    border: 0;
+    background-color: var(--azulnegocio);
+    padding: 1%;
+    color: #fff;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
