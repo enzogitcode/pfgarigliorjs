@@ -4,11 +4,6 @@ const CartItem = ({ item, cantidad, eliminarProducto }) => {
 
   return (
     <>
-      {/* <h3> {item.nombre}  </h3>
-        <p> Cantidad: {cantidad} </p>
-        <p> Precio: {item.precio} </p>
-        <p> Precio final: {item.precio * cantidad} */}
-
       <div className='cardItemContainer'>
         <div class="textoCompra">
           <div class="descripcionCompra">
