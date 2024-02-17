@@ -37,6 +37,7 @@
 
 .divBtnsCarrito {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
@@ -61,4 +62,16 @@
     padding: 1%;
     border-radius: 10px;
     border: solid var(--azulnegocio);
+}
+
+.divCarritoItems {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cardBisque);
+    color: var(--azulletras);
+    font-size: 2rem;
+    font-family: 'Collingar';
+    text-align: center;
+    margin: 3rem;
+    flex-direction: column;
 }
