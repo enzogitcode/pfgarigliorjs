@@ -16,6 +16,16 @@
     margin: 1%;
 }
 
+.divsItemCompra {
+    border: 1px solid #000;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+    * {
+        margin: .5rem;
+    }
+}
+
 input {
     margin: 2%;
 }
@@ -49,10 +59,21 @@ label {
     padding: 3%;
     font-size: 1.5rem;
 }
+
 .divError {
     border: var(--colorrojizovino) solid 5px;
     background-color: var(--colorrojizovino);
     color: #fff;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.agradecimientoCompra {
+    border: var(--colorrojizovino) solid 5px;
+    background-color: var(--azulnegocio);
+    font-family: 'collingar';
     align-items: center;
     text-align: center;
     border-radius: 10px;

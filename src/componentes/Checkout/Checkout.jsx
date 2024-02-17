@@ -26,6 +26,7 @@ const Checkout = () => {
       return;
     }
     if (email !== emailConfirmacion) {
+      console.log (error)
       setError("los emails no coinciden");
       return;
     }
@@ -34,7 +35,7 @@ const Checkout = () => {
       items: carrito.map(producto => ({
         id: producto.item.id,
         nombre: producto.item.nombre,
-        cantidad: producto.item.cantidad,
+        cantidad: producto.cantidad,
       })),
       total: total,
       fecha: new Date(),
@@ -55,51 +56,58 @@ const Checkout = () => {
       })
   }
 
+  const removerBtns = () => {
+    
+  }
+
   return (
     <div id='divFormulario'>
       <h3>Por favor, complete el siguiente formulario para finalizar la compra</h3>
       <form id='formCheckout' onSubmit={manejadorSubmit}>
-
-        {
-          carrito.map(producto => (
-            <div key={producto.item.id} >
-              <p>{producto.item.nombre} x {producto.cantidad}</p>
-              <p>Precio: ${producto.item.precio}</p>
-              <button className='btnEliminarDelCarrito' onClick={() => eliminarDelCarrito (id)}>Eliminar del carrito</button>
-            </div>
-          ))
-        }
-        <div>
-          <label htmlFor="nombre"> Nombre </label>
-          <input type="text" id="nombre" onChange={(e) => setNombre(e.target.value)} />
+        <div className="itemsCheckout">
+          {
+            carrito.map(producto => (
+              <div className='divsItemCompra' key={producto.item.id} >
+                <p>{producto.item.nombre} x {producto.cantidad}</p>
+                <p>Precio: ${producto.item.precio}</p>
+                <button className='btnEliminarDelCarrito' onClick={() => eliminarDelCarrito(id)}>Eliminar del carrito</button>
+              </div>
+            ))
+          }
         </div>
 
-        <div>
-          <label htmlFor="apellido"> Apellido </label>
-          <input type="text" id="apellido" onChange={(e) => setApellido(e.target.value)} />
-        </div>
 
-        <div>
-          <label htmlFor="telefono"> Telefono </label>
-          <input type="text" id="telefono" onChange={(e) => setTelefono(e.target.value)} />
-        </div>
+          <div>
+            <label htmlFor="nombre"> Nombre </label>
+            <input type="text" id="nombre" onChange={(e) => setNombre(e.target.value)} />
+          </div>
 
-        <div>
-          <label htmlFor="email"> E-mail </label>
-          <input type="email" id="email" onChange={(e) => setEmail(e.target.value)} />
-        </div>
+          <div>
+            <label htmlFor="apellido"> Apellido </label>
+            <input type="text" id="apellido" onChange={(e) => setApellido(e.target.value)} />
+          </div>
 
-        <div>
-          <label htmlFor="emailcon"> Email Confirmación </label>
-          <input type="email" id="emailcon" onChange={(e) => setEmailConfirmacion(e.target.value)} />
-        </div>
+          <div>
+            <label htmlFor="telefono"> Telefono </label>
+            <input type="text" id="telefono" onChange={(e) => setTelefono(e.target.value)} />
+          </div>
 
-          {error && <div className='divError'><p>{error}</p></div>}
+          <div>
+            <label htmlFor="email"> E-mail </label>
+            <input type="email" id="email" onChange={(e) => setEmail(e.target.value)} />
+          </div>
+
+          <div>
+            <label htmlFor="emailcon"> Email Confirmación </label>
+            <input type="email" id="emailcon" onChange={(e) => setEmailConfirmacion(e.target.value)} />
+          </div>
+        {error && <div className='divError'><p>{error}</p></div>}
         <div id="divBtnForm">
           <button className='btnForm' type='reset'>Reestablecer</button>
           <button className='btnForm' type='submit'>Finalizar orden</button>
           {ordenId && <div className='agradecimientoCompra'><strong>Gracias por su compra! Su número de compra es: {ordenId}</strong></div>}
         </div>
+
       </form >
     </div >
   );
