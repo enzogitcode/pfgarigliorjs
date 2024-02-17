@@ -1,24 +1,3 @@
-/* @font-face {
-    font-family: Collingar;
-    src: url(/fonts/Collingardemo.otf);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Roboto:wght@100&family=Sen&family=Ubuntu:wght@300&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --azulnegocio: #141951;
-    --azulletras: #161952;
-    --celestebandera: #75AADb;
-    --colorrojizo: #8b171a;
-    --cardBisque: #dbc3b3;
-}
- */
 h1 {
     font-family: 'Collingar';
     font-size: 2.5rem;
@@ -31,7 +10,6 @@ h1 {
 header {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
     align-items: center;
     justify-content: space-evenly;
     font-family: 'Collingar';
