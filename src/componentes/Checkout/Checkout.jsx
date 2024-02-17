@@ -55,9 +55,6 @@ const Checkout = () => {
       })
   }
 
-  
-
-
   return (
     <div id='divFormulario'>
       <h3>Por favor, complete el siguiente formulario para finalizar la compra</h3>
@@ -65,10 +62,10 @@ const Checkout = () => {
 
         {
           carrito.map(producto => (
-            <div key={producto.item.id}>
+            <div key={producto.item.id} >
               <p>{producto.item.nombre} x {producto.cantidad}</p>
               <p>Precio: ${producto.item.precio}</p>
-              <button onClick={() => eliminarDelCarrito (id)}>Eliminar del carrito</button>
+              <button className='btnEliminarDelCarrito' onClick={() => eliminarDelCarrito (id)}>Eliminar del carrito</button>
             </div>
           ))
         }

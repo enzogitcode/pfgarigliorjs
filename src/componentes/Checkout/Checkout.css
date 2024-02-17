@@ -29,6 +29,7 @@ label {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #divFormulario input {
@@ -48,7 +49,6 @@ label {
     padding: 3%;
     font-size: 1.5rem;
 }
-
 .divError {
     border: var(--colorrojizovino) solid 5px;
     background-color: var(--colorrojizovino);
@@ -57,40 +57,4 @@ label {
     text-align: center;
     border-radius: 10px;
     padding: 1%;
-}
-
-.descripcionCompraCheckout {
-    margin: .5rem;
-    display: flex;
-    flex-grow: 1;
-}
-.textoCheckout {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border: 1px solid#000;
-}
-
-
-.descripcionCompra {
-    display: flex;
-    background-color: var(--cardBisque);
-    padding: 1rem;
-    color: var(--azulnegocio);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-
-    * {
-        margin: 1%;
-        text-align: center;
-    }
-}
-.btnEliminarDelCarrito {
-    font-family: 'Ubuntu';
-    font-size: 1.5rem;
-    background-color: var(--azulnegocio);
-    margin-left: 0;
-    padding: 1%;
-    color: #fff;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
